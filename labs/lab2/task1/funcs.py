@@ -1,15 +1,13 @@
-import unittest
-import funcs
+import math
 
-class TestCases(unittest.TestCase):
-   def test_f_1(self):
-      # Add code here.
-      self.fail("Test not implemented")
+def f(x: float):
+  return (7 * (x ** 2)) + (2 ** x)
 
-   def test_f_2(self):
-      # Add code here.
-      self.fail("Test not implemented")
+def g(x: float, y: float):
+  return ((x ** 2) + (y ** 2))
 
-# Run the unit tests.
-if __name__ == '__main__':
-   unittest.main()
+def hypotenuse(x: float, y: float):
+  return math.sqrt((x ** 2) + (y ** 2))
+
+def is_positive(x: float):
+  return x > 0
