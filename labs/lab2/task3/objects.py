@@ -5,7 +5,7 @@ class Point:
     self.x = x
     self.y = y
   def __str__(self):
-    return f"({self.x}, {self.y})"  
+    return f"({self.x}, {self.y})"
 
 class Circle(Point):
   def __init__(self, x: float, y: float, radius: float):
