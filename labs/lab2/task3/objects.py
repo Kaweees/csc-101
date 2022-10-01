@@ -16,4 +16,4 @@ def distance(p1: Point, p2: Point):
   return math.sqrt(((p1.x - p2.x) ** 2) + ((p1.y - p2.y) ** 2))
 
 def circles_overlap(c1: Circle, c2: Circle):
-  return distance(c1, c2) <= c1.radius + c2.radius
+  return distance(c1, c2) < c1.radius + c2.radius
