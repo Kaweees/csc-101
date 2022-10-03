@@ -1,0 +1,9 @@
+cd task1
+python funcs_tests.py
+cd ../task2/line
+python line_tests.py
+cd ../vehicle
+python vehicle_tests.py
+cd ../../task3
+python funcs_objects_tests.py
+cd ..
