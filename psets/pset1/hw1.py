@@ -6,7 +6,7 @@ class Price:
     self.cents = cents
 
   def __str__(self):
-    return f"$ {str(self.dollars)}.{str(self.cents)}"
+    return f"${str(self.dollars)}.{str(self.cents)}"
 
   def __eq__(self, other):
     return (other is self or
