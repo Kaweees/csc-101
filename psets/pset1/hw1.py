@@ -4,10 +4,8 @@ class Price:
   def __init__(self, dollars: int, cents: int):
     self.dollars = dollars
     self.cents = cents
-
   def __str__(self):
     return f"${str(self.dollars)}.{str(self.cents)}"
-
   def __eq__(self, other):
     return (other is self or
       type(other) == Price and
@@ -23,7 +21,7 @@ class Point:
     self.y = y
   def __eq__(self, other: object) -> bool:
     return (other is self or
-      type(other) == Rectangle and
+      type(other) == Point and
      math.isclose(self.x, other.x) and math.isclose(self.y, other.y))
 
 class Rectangle:
@@ -46,7 +44,7 @@ class Circle:
 
 def rectangle_perimeter(rect: Rectangle) -> float:
   """Returns the perimeter of a rectangle."""
-  return 2 * (rect.top_left.x - rect.bottom_right.x) + 2 * (rect.top_left.y - rect.bottom_right.y)
+  return 2 * (rect.bottom_right.x - rect.top_left.x) + 2 * (rect.top_left.y - rect.bottom_right.y)
 
 def rectangle_lower_half(rect: Rectangle) -> Rectangle:
   """Returns a new Rectangle object that is the lower half of the given Rectangle object."""
@@ -54,12 +52,15 @@ def rectangle_lower_half(rect: Rectangle) -> Rectangle:
 
 def is_square(rect: Rectangle) -> bool:
   """Returns True if the given Rectangle object is a square."""
-  return (rect.top_left.x - rect.bottom_right.x) == (rect.top_left.y - rect.bottom_right.y)
+  return (rect.bottom_right.x - rect.top_left.x) == (rect.top_left.y - rect.bottom_right.y)
 
 def circle_within_rectangle(circle: Circle, rect: Rectangle) -> bool:
   """Returns True if the given Circle object is within the given Rectangle object."""
-  return (circle.center.x - circle.radius) >= rect.bottom_right.x and (circle.center.x + circle.radius) <= rect.top_left.x and (circle.center.y - circle.radius) >= rect.bottom_right.y and (circle.center.y + circle.radius) <= rect.top_left.y
+  return ((circle.center.x + circle.radius) > rect.top_left.x and
+    (circle.center.y + circle.radius) < rect.top_left.y and
+    (circle.center.x - circle.radius) < rect.bottom_right.x and
+    (circle.center.y - circle.radius) > rect.bottom_right.y)
 
 def circle_bound(rect: Rectangle) -> Circle:
   """Returns a new Circle object that is the smallest circle that bounds the given Rectangle object."""
-  return Circle(Point((rect.top_left.x + rect.bottom_right.x) / 2, (rect.top_left.y + rect.bottom_right.y) / 2), math.sqrt(((rect.top_left.x - rect.bottom_right.x) / 2) ** 2 + ((rect.top_left.y - rect.bottom_right.y) / 2) ** 2))
+  return Circle(Point((rect.top_left.x + rect.bottom_right.x) / 2, (rect.top_left.y + rect.bottom_right.y) / 2), math.sqrt((rect.bottom_right.x - rect.top_left.x) ** 2 + (rect.top_left.y - rect.bottom_right.y) ** 2))
