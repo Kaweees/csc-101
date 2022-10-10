@@ -1,3 +1,12 @@
+#
+# Programmer: Miguel Villa Floran
+# GitHub: Kaweees
+# Date: 09/19/2022
+# Course Name: CSC 101 - Fundamentals of Computer Science
+# Section: Week 02 (Sept 26 - Oct 03)
+# Purpose/Assignment: Lab 2 - Task 2 (Vehicle)
+#
+
 import unittest
 import vehicle
 

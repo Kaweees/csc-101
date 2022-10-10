@@ -1,14 +1,13 @@
 #
-# Test cases example for lab 1.
+# Programmer: Miguel Villa Floran
+# GitHub: Kaweees
+# Date: 09/19/2022
+# Course Name: CSC 101 - Fundamentals of Computer Science
+# Section: Week 01 (Sept 19 - Sept 26)
+# Purpose/Assignment: Lab 1
 #
 
-import unittest # import the module that supports writing unit tests
-
-# Define a class that will be used for these test cases.
-# This class will include testing functions.
-#
-# We will explain what the is code does in lecture.
-#
+import unittest
 
 class TestsLab1(unittest.TestCase):
   # Define one testing function per test.

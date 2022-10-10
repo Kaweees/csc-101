@@ -1,12 +1,11 @@
 #
-# This is a header block example for lab 1.
+# Programmer: Miguel Villa Floran
+# GitHub: Kaweees
+# Date: 09/19/2022
+# Course Name: CSC 101 - Fundamentals of Computer Science
+# Section: Week 01 (Sept 19 - Sept 26)
+# Purpose/Assignment: Lab 1
 #
-# You will need to supply the following information.
-#
-# Name: Miguel Villa Floran
-# Instructor: Vanessa Rivera
-# Section: 07
-# Why did the programmer quite their job? Because they couldn't get arrays! :)))
 
 import unittest
 
