@@ -22,13 +22,11 @@ class TestCases(unittest.TestCase):
     self.assertAlmostEqual(pt.y, 19.2)
 
   def test_equality_one(self):
-    # Replace pass with the test code.
     pt1 = point.Point(-4, 19)
     pt2 = point.Point(-4, 19)
     self.assertEqual(pt1, pt2)
 
   def test_equality_two(self):
-    # Replace pass with the test code.
     pt1 = point.Point(69, 19)
     pt2 = point.Point(175, 19)
     self.assertEqual(pt1, pt2)

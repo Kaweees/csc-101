@@ -14,4 +14,5 @@ class Point:
     self.x = x
     self.y = y
   def __eq__(self, other : object) -> bool:
-    return type(other) is Point and math.isclose(self.x, other.x) and math.isclose(self.y, other.y)
+    return (type(other) is Point
+      and math.isclose(self.x, other.x) and math.isclose(self.y, other.y))
