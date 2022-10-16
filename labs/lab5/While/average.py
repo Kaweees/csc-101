@@ -12,3 +12,9 @@ if __name__ == "__main__": # This is to enable a "play" button in PyCharm
   values = [3.33, 45.0, 12.5, 80.0, 45.0, 16.0]
 
   # Write your code here
+  i = 0
+  total = 0
+  while i < len(values):
+    total += values[i]
+    i += 1
+  print(total / i)

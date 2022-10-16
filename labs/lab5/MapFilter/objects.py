@@ -18,7 +18,7 @@ class Book:
 
   def __eq__(self, other) -> bool:
     return (other is self or
-        type(other) == Book and
-        self.title == other.title and
-        self.author == other.author and
-        self.year == other.year)
+      type(other) == Book and
+      self.title == other.title and
+      self.author == other.author and
+      self.year == other.year)

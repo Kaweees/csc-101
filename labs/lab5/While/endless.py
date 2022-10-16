@@ -16,3 +16,5 @@ if __name__ == "__main__": # This is to enable a "play" button in PyCharm
     value_1 += 1
     value_2 += 1
     # Add code here
+    if value_1 == 5:
+      break
