@@ -109,7 +109,7 @@ def getLengthsInSeconds(l1: list[Song]) -> list[int]:
   return [((song.duration.minutes * 60) + song.duration.seconds) for song in l1]
 
 def getSongsByArtist(l1: list[Song], artist: str) -> list[Song]:
-  """Return a list of songs by given artist."""
+  """Return a list of songs by given artist name."""
   return [song for song in l1 if song.artist == artist]
 
 def getPlaylistLengthInSeconds(l1: list[Song]) -> int:

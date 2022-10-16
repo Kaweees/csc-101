@@ -25,14 +25,24 @@ class AssignmentTests(unittest.TestCase):
     self.assertEqual(hw2.createRectangle(hw2.Point(1, 1), hw2.Point(0, 0)), hw2.Rectangle(hw2.Point(0, 1), hw2.Point(1, 0)))
 
   def test_part_4(self):
+    self.assertEqual(hw2.addDurations(hw2.Duration(3, 20), hw2.Duration(3, 21)), hw2.Duration(6, 41))
+    self.assertEqual(hw2.addDurations(hw2.Duration(4, 20), hw2.Duration(3, 31)), hw2.Duration(7, 51))
+
+  def test_part_5(self):
     self.assertTrue(hw2.Song("Can't Help Falling In Love", "Elvis Presley", hw2.Duration(3, 0)).artist == "Elvis Presley")
     self.assertTrue(hw2.Song("Swing! Pendulum of Souls", "Bachi The Sunset", hw2.Duration(3, 21)).artist == "Bachi The Sunset")
 
-  def test_part_5(self):
-    self.assertTrue(hw2.getLengthsInSeconds([hw2.Song("Good Morning World!", "BURNOUT SYNDROMES", hw2.Duration(4, 9)), hw2.Song("熱き決闘者たち(Re-arranged)", "光宗信吉", hw2.Duration(4, 1))]), [249, 241])
-
   def test_part_6(self):
-    self.assertTrue(hw2.getLengthsInSeconds([]))
+    self.assertEqual(hw2.getLengthsInSeconds([hw2.Song("Good Morning World!", "BURNOUT SYNDROMES", hw2.Duration(4, 9)), hw2.Song("熱き決闘者たち(Re-arranged)", "光宗信吉", hw2.Duration(4, 1))]), [249, 241])
+    self.assertEqual(hw2.getLengthsInSeconds([hw2.Song("7 Years", "Lukas Graham", hw2.Duration(3, 59)), hw2.Song("Stressed Out", "Twenty One Pilots", hw2.Duration(3, 23))]), [239, 203])
+
+  def test_part_7(self):
+    self.assertEqual(hw2.getSongsByArtist([hw2.Song("熱き決闘者たち(Re-arranged)", "光宗信吉", hw2.Duration(4, 1)), hw2.Song("7 Years", "Lukas Graham", hw2.Duration(3, 59))], "Lukas Graham"), [hw2.Song("7 Years", "Lukas Graham", hw2.Duration(3, 59))])
+    self.assertEqual(hw2.getSongsByArtist([hw2.Song("Good Morning World!", "BURNOUT SYNDROMES", hw2.Duration(4, 9)), hw2.Song("Stressed Out", "Twenty One Pilots", hw2.Duration(3, 23))], "Twenty One Pilots"), [hw2.Song("Stressed Out", "Twenty One Pilots", hw2.Duration(3, 23))])
+
+  def test_part_8(self):
+    self.assertEqual(hw2.getPlaylistLengthInSeconds([hw2.Song("熱き決闘者たち(Re-arranged)", "光宗信吉", hw2.Duration(4, 1)), hw2.Song("7 Years", "Lukas Graham", hw2.Duration(3, 59))]), 480)
+    self.assertEqual(hw2.getPlaylistLengthInSeconds([hw2.Song("Good Morning World!", "BURNOUT SYNDROMES", hw2.Duration(4, 9)), hw2.Song("Stressed Out", "Twenty One Pilots", hw2.Duration(3, 23))]), 452)
 
 if __name__ == "__main__":
   unittest.main()
