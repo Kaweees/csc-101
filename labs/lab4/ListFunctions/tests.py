@@ -8,6 +8,7 @@
 #
 
 import unittest
+import functions
 
 class listFunctionTests(unittest.TestCase):
   # Do not modify these tests
