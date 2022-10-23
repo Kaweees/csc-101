@@ -112,6 +112,7 @@ def getSongsByArtist(l1: list[Song], artist: str) -> list[Song]:
   """Return a list of songs by given artist name."""
   return [song for song in l1 if song.artist == artist]
 
-def getPlaylistLengthInSeconds(l1: list[Song]) -> int:
-  """Return the total length of all songs in the playlist in seconds."""
-  return sum([((song.duration.minutes * 60) + song.duration.seconds) for song in l1])
+def getPlaylistLengthInSeconds(l1: list[Song]) -> Duration:
+  """Return the total length of all songs in the playlist in a Duration object."""
+  sum_sec = sum([((song.duration.minutes * 60) + song.duration.seconds) for song in l1])
+  return Duration(sum_sec // 60, sum_sec % 60)
