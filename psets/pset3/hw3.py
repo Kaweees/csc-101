@@ -1,10 +1,10 @@
 #
 # Programmer: Miguel Villa Floran
 # GitHub: Kaweees
-# Date: 10/10/2022
+# Date: 10/22/2022
 # Course Name: CSC 101 - Fundamentals of Computer Science
-# Section: Week 04 (Oct 10 - Oct 17)
-# Purpose/Assignment: Lab 4 (ListFunctions)
+# Section: Week 06 (Oct 24 - Oct 31)
+# Purpose/Assignment: Assignment 3
 #
 
 class Employee:
