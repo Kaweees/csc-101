@@ -8,10 +8,14 @@
 #
 
 import unittest
+import functions
 
 class StringTest(unittest.TestCase):
   def test_1(self):
-    pass
-
+    self.assertEqual(functions.swapCase("AbC"), "aBc")
+    self.assertEqual(functions.swapCase("aBc"), "AbC")
+  def test_2(self):
+    self.assertEqual(functions.replaceChar("AbC", "A", "Q"), "QbC")
+    self.assertEqual(functions.replaceChar("aBc", "B","Q"), "aQc")
 if __name__ == "__main__":
   unittest.main()
