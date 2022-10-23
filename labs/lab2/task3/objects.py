@@ -10,14 +10,14 @@
 import math
 
 class Point:
-  def __init__(self, x: float, y: float):
+  def __init__(self, x: float, y: float) -> None:
     self.x = x
     self.y = y
-  def __str__(self):
+  def __str__(self) -> str:
     return f"({self.x}, {self.y})"
 
 class Circle(Point):
-  def __init__(self, x: float, y: float, radius: float):
+  def __init__(self, x: float, y: float, radius: float) -> None:
     super().__init__(x, y)
     self.radius = radius
 

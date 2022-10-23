@@ -11,14 +11,12 @@ import math
 
 class Duration:
   """Represents a length of time in minutes and whole seconds."""
-  def __init__(self, minutes: int, seconds: int):
+  def __init__(self, minutes: int, seconds: int) -> None:
     self.minutes = minutes
     self.seconds = seconds
-
-  def __repr__(self):
+  def __repr__(self) -> str:
     return f"Duration({self.minutes},{self.seconds})"
-
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Duration and
       self.minutes == other.minutes and
@@ -26,14 +24,12 @@ class Duration:
 
 class Point:
   """Represents an 2d cartesian coordinate point."""
-  def __init__(self, x: float, y: float):
+  def __init__(self, x: float, y: float) -> None:
     self.x = x
     self.y = y
-
-  def __repr__(self):
+  def __repr__(self) -> str:
     return f"Point({self.x},{self.y})"
-
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Point and
       math.isclose(self.x, other.x) and
@@ -41,14 +37,12 @@ class Point:
 
 class Rectangle:
   """Represents rectangle defined by top-left and bottom-right points."""
-  def __init__(self, top_left: Point, bottom_right: Point):
+  def __init__(self, top_left: Point, bottom_right: Point) -> None:
     self.top_left = top_left
     self.bottom_right = bottom_right
-
-  def __repr__(self):
+  def __repr__(self) -> str:
     return f"Rectangle({self.top_left},{self.bottom_right})"
-
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Rectangle and
       self.top_left == other.top_left and
@@ -56,15 +50,13 @@ class Rectangle:
 
 class Triangle:
   """Represents Triangle defined by three points."""
-  def __init__(self, a: Point, b: Point, c: Point):
+  def __init__(self, a: Point, b: Point, c: Point) -> None:
     self.a = a
     self.b = b
     self.c = c
-
-  def __repr__(self):
+  def __repr__(self) -> str:
     return f"Triangle({self.a}, {self.b}, {self.c})"
-
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Triangle and
       self.a == other.a and
@@ -88,16 +80,14 @@ def addDurations(d1: Duration, d2: Duration) -> Duration:
   return Duration((d1.minutes + d2.minutes + ((d1.seconds + d2.seconds) // 60)), ((d1.seconds + d2.seconds) % 60))
 
 class Song:
-  def __init__(self, name: str, artist: str, duration: Duration):
+  def __init__(self, name: str, artist: str, duration: Duration) -> None:
     """Represents a song."""
     self.name = name
     self.artist = artist
     self.duration = duration
-
-  def __repr__(self):
+  def __repr__(self) -> str:
     return f"Song({self.name}, {self.artist}, {self.duration})"
-
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Song and
       self.name == other.name and

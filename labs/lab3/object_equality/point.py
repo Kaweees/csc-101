@@ -10,7 +10,7 @@
 import math
 
 class Point:
-  def __init__(self, x: float, y: float):
+  def __init__(self, x: float, y: float) -> None:
     self.x = x
     self.y = y
   def __eq__(self, other : object) -> bool:

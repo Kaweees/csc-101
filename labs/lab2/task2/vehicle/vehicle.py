@@ -8,9 +8,9 @@
 #
 
 class vehicle:
-  def __init__(self, color: str, year: int, cost: float):
+  def __init__(self, color: str, year: int, cost: float) -> None:
     self.color = color
     self.year = year
     self.cost = cost
-  def __str__ (self):
+  def __str__(self) -> str:
     return f"Car of color ({self.color} from the year {self.year}) of cost ({self.cost}"

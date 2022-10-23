@@ -10,12 +10,12 @@
 import math
 
 class Price:
-  def __init__(self, dollars: int, cents: int):
+  def __init__(self, dollars: int, cents: int) -> None:
     self.dollars = dollars
     self.cents = cents
-  def __str__(self):
+  def __str__(self) -> str:
     return f"${str(self.dollars)}.{str(self.cents)}"
-  def __eq__(self, other):
+  def __eq__(self, other) -> bool:
     return (other is self or
       type(other) == Price and
       self.dollars == other.dollars and self.cents == other.cents)

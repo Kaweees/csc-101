@@ -1,5 +1,5 @@
 class ProgrammingLanguage():
-  def __init__(self, name: str, version: int, has_objects: bool):
+  def __init__(self, name: str, version: int, has_objects: bool) -> None:
     self.name = name
     self.version = version
     self.has_objects = has_objects
