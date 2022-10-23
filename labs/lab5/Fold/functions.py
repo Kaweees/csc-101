@@ -11,7 +11,7 @@ import objects
 
 def getMinimumDistance(ls: list[int]) -> int:
   """return the index of the element of minimum value from the input list"""
-  if len(ls) == []:
+  if ls == []:
     return None
   minVal = ls[0]
   for i in range(len(ls)):
@@ -31,7 +31,7 @@ def areAllTrue(ls: list[bool]) -> bool:
 def getCenterPoint(ls: list[objects.Point]) -> objects.Point:
   """return the center point of the input list of points"""
   x, y = 0, 0
-  if len(ls) == []:
+  if ls == []:
     return None
   for item in ls:
     x += item.x
@@ -40,7 +40,7 @@ def getCenterPoint(ls: list[objects.Point]) -> objects.Point:
 
 def countLessThanFour(ls: list[str]) -> int:
   """return the number of elements in the input list whose length is less than 4"""
-  if len(ls) == []:
+  if ls == []:
     return None
   count = 0
   for item in ls:
