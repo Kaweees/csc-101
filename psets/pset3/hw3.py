@@ -7,6 +7,8 @@
 # Purpose/Assignment: Assignment 3
 #
 
+from typing import Optional
+
 class Book:
   """Represents a Book with multiple authors"""
   def __init__(self, title: str, authors: list[str], year: int) -> None:
@@ -51,3 +53,23 @@ def validateRoute(city_links : list[list[str]], route: list[str]) -> bool:
     if not(any(city_link for city_link in city_links if set(sorted(route[i:i+2])).issubset(sorted(city_link)))):
       return False
   return True
+
+def groupIntoThrees(nums: list[int]) -> list[list[int]]:
+  """Returns a list of lists of 3 numbers"""
+  return [nums[i:i+3] for i in range(0, len(nums), 3)]
+
+def getLongestRepetition(nums: list[int]) -> Optional[int]:
+  """Returns the longest repetition of an integer in a list"""
+  if nums == []:
+    return None
+  longest_index = 0
+  longest = 0
+  for i in range(len(nums) - 1):
+    for j in range(i, len(nums) - 1):
+      if nums[i] == nums[j]:
+        if j - i > longest:
+          longest = j - i
+          longest_index = i
+      else:
+        break
+  return longest_index

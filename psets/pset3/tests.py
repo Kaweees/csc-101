@@ -28,6 +28,10 @@ class AssignmentTests(unittest.TestCase):
     self.assertTrue(hw3.validateRoute(city_links, ['san luis obispo', 'santa margarita', 'atascadero']))
     self.assertFalse(hw3.validateRoute(city_links, ['san luis obispo', 'atascadero']))
   def test_part_4(self):
-    pass
+    self.assertEqual(hw3.groupIntoThrees([1,2,3,4,5,6,7,8,9]), [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    self.assertEqual(hw3.groupIntoThrees([1,2,3,4,5,6,7,8]), [[1, 2, 3], [4, 5, 6], [7, 8]])
+  def test_part_5(self):
+    self.assertEqual(hw3.getLongestRepetition([1, 1, 2, 2, 1, 1, 1, 3]), 4)
+    self.assertEqual(hw3.getLongestRepetition([1, 2, 3, 4, 5, 6, 7, 8]), 0)
 if __name__ == "__main__":
   unittest.main()
