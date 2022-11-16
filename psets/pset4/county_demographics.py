@@ -1,3 +1,12 @@
+#
+# Programmer: Miguel Villa Floran
+# GitHub: Kaweees
+# Date: 11/03/2022
+# Course Name: CSC 101 - Fundamentals of Computer Science
+# Section: Week 08 (Nov 07 - Nov 14)
+# Purpose/Assignment: Assignment 4
+#
+
 '''
 Hello! Thank you for downloading a CORGIS library. However, you do not
 need to open this file. Instead you should make your own Python file and
