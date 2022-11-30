@@ -2,6 +2,7 @@
   "recommendations": [
     "ms-python.vscode-pylance",
     "ms-python.python",
-    "ms-vsliveshare.vsliveshare"
+    "ms-vsliveshare.vsliveshare",
+    "ngtystr.ppm-pgm-viewer-for-vscode"
   ]
 }
